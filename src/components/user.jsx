@@ -1,7 +1,7 @@
 // import React from "react";
 
 
-//class User extends React.Component {
+// class User extends React.Component {
 //  constructor(props) {
 //      console.log("hey I'm from Constructor");
 //      super(props);
@@ -18,15 +18,15 @@
 // static getDerivedStateFromProps(props,state) {
 // console.log("I'm from get derived state from props");
 // return {planet:"jupiter"}
-//})
-//}
+// }
+
 
 
 //  shouldComponentUpdate(nextprop, nextstate) {
 //      console.log("from shouldComponentUpdate");
 //      console.log({
 //          nextprop,
-///          nextstate,
+//           nextstate,
 //      });
 //      return true;
 //   };
@@ -36,7 +36,7 @@
 //     console.log("from getSnapshotBeforeUpdate");
 //      console.log({ prevprops, prevstate });
 //      return true;
-//  }
+//  };
 
 //  componentDidUpdate() {
 //      console.log("from componentdidupdate");
@@ -52,8 +52,9 @@
 //              <p>{this.state.planet}</p>
 //          </div>
 //      );
-//   }
-//}
+  
+// };
+// }
 //                                              Hook Method -1
 
 //import React from "react";
@@ -81,22 +82,22 @@
 // };
 
 // Hook method using setState but we can't use set state in Hook but the hook i came up with a method called useEffect
-import React, { useState, useEffect } from "react";
-const User = (props) => {
-    const [planet, setPlanet] = useState("Earth");
-    useEffect(() => {
-        setPlanet("Jupiter");
-        console.log("Component Mounting ");
-    },[])
+// import React, { useState, useEffect } from "react";
+// const User = (props) => {
+//     const [planet, setPlanet] = useState("Earth");
+//     useEffect(() => {
+//         setPlanet("Jupiter");
+//         console.log("Component Mounting ");
+//     },[])
 
-    useEffect(() =>{
-        console.log("Planet Changed");
-    },[planet])
-    return (<div>
-        <h1>{props.name}</h1>
-        <p>{props.description}</p>
-        <button onClick={() =>setPlanet("pluto")}>{planet}</button>
-    </div>
-    );
-};
-export default User;
+//     useEffect(() =>{
+//         console.log("Planet Changed");
+//     },[planet])
+//     return (<div>
+//         <h1>{props.name}</h1>
+//         <p>{props.description}</p>
+//         <button onClick={() =>setPlanet("pluto")}>{planet}</button>
+//     </div>
+//     );
+// };
+//export default User;
